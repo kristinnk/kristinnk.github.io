@@ -21,7 +21,14 @@
 		<div class="panel-heading">
 			Hit generator!
 		</div>
+
 		<div class="panel-body">
+
+		<div class="col-sm-4 col-sm-offset-4 col-xs-12">
+			<div id="divMan" style="position: relative;">
+				<img src="img/man.jpg" style="width:200px; left:0px; top:0px;">
+			</div>
+		</div>
 			<form>
 				<div class="form-group col-xs-12">
 					<label for="tbNumberOfShots">Number of shots (ratatatat)</label>
@@ -37,17 +44,10 @@
 				
 			</form>
 		</div>
-		<div class="col-sm-6 col-sm-offset-3 col-xs-12">
-			<div id="divMan" style="position: relative;">
-				<img src="img/man.jpg" style="width:200px; left:0px; top:0px;">
-			</div>
-		</div>
 		
-		<div class="panel-footer text-right" style="margin-top:400px;">
+		<div class="panel-footer text-right">
 			<span style="font-size: 10px;">Rip and tear</span>
 		</div>
-
-	
 	</div>
 </body>
 
@@ -70,7 +70,7 @@
 
 	function createDiv(shotNumber, damage, location) {
 		parentDiv = $('#divResultList');
-		parentDiv.append("<div style='margin-bottom:5px'>" +
+		parentDiv.append("<div style='margin-bottom:5px' hitloc='"+location+"'>" +
 						"<i>Shot #" + shotNumber + "<br></i>" + 
 						"Hit location : " + location + "<br>" +
 						"Damage : <b>" + damage + "</b><br>" +
