@@ -24,11 +24,7 @@
 
 		<div class="panel-body">
 
-		<div class="col-sm-4 col-sm-offset-4 col-xs-12">
-			<div id="divMan" style="position: relative;">
-				<img src="img/man.jpg" style="width:200px; left:0px; top:0px;">
-			</div>
-		</div>
+
 			<form>
 				<div class="form-group col-xs-12">
 					<label for="tbNumberOfShots">Number of shots (ratatatat)</label>
@@ -39,10 +35,16 @@
 					<input type="text" id="tbDamageDiceField" class="form-control" value="1d10+1" />
 					<input type="button" id="btnFire" class="btn btn-danger col-xs-12" style="margin-top:5px;" value="Fire" onclick="fireGun()" />
 				</div>
-				<div id="divResultList" class="form-group col-xs-12 well">
-				</div>
 				
 			</form>
+			<div class="col-sm-4 col-sm-offset-4 col-xs-12">
+				<div id="divMan" style="position: relative;">
+					<img src="img/man.jpg" style="width:200px; left:0px; top:0px;">
+				</div>
+			</div>
+			<div id="divResultList" class="form-group col-xs-12 well">
+			</div>
+				
 		</div>
 		
 		<div class="panel-footer text-right">
@@ -89,6 +91,9 @@
 			if (value["location"] == location)
 				return value;
 		})
+		obj.x = obj.x + (Math.random() * 6) - 3;
+		obj.y = obj.y + (Math.random() * 6) - 3;
+
 		parentDiv.append("<div class='"+ location +"' style='z-index:"+zindex+"; position:absolute; top:"+obj.y+"px; left:"+obj.x+"px;'><img src='img/x.png' style='width:10px;'></div>");
 	}
 
