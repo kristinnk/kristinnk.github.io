@@ -91,10 +91,10 @@
 			if (value["location"] == location)
 				return value;
 		})
-		obj.x = obj.x + (Math.random() * 6) - 3;
-		obj.y = obj.y + (Math.random() * 6) - 3;
+		posX = obj.x + (Math.random() * 10) - 5;
+		posY = obj.y + (Math.random() * 10) - 5;
 
-		parentDiv.append("<div class='"+ location +"' style='z-index:"+zindex+"; position:absolute; top:"+obj.y+"px; left:"+obj.x+"px;'><img src='img/x.png' style='width:10px;'></div>");
+		parentDiv.append("<div class='"+ location +"' style='z-index:"+zindex+"; position:absolute; top:"+posY+"px; left:"+posX+"px;'><img src='img/x.png' style='width:10px;'></div>");
 	}
 
 	function fireGun() {
